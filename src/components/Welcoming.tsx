@@ -1,17 +1,16 @@
 import { useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSearchParam } from 'react-use';
 
 const Welcoming: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleSearchButton = (preset: string = '') => {
-    history.pushState(
-      {},
-      '',
-      location.pathname +
-        `?` +
-        new URLSearchParams({
-          search: preset,
-          mode: 'search',
-        }).toString()
+    navigate(
+      `/application?${new URLSearchParams({
+        search: preset,
+        mode: 'search',
+      }).toString()}`
     );
   };
 
