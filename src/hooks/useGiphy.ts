@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query';
-import { API_KEY, GIPHY_API_URL, GIPHY_API_VERSION } from '../utils/constant';
+import { GIPHY_API_URL, GIPHY_API_VERSION } from '../utils/constant';
 
 export interface Original {
   height: string;
